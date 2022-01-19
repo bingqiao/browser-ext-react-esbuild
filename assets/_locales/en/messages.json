@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "Browser Ext",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "Browser extension implemented in React and built by esbuild",
+        "description": "Description of what the extension does."
+    }
+}

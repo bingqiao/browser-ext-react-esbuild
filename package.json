@@ -1,0 +1,42 @@
+{
+  "name": "browser-ext-react-esbuild",
+  "version": "1.0.0",
+  "description": "Browser Extension for Safari and Chrome",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "destroy": "rm -rf '../browser-ext/Shared (Extension)/Resources/'*",
+    "build": "tsc && node esbuild.js",
+    "assets": "cp -r assets/* dist/",
+    "copy": "cp -r dist/* '../browser-ext/Shared (Extension)/Resources/'",
+    "package": "npm run clean && npm run build && npm run assets",
+    "deploy": "npm run package && npm run destroy && npm run copy"
+  },
+  "keywords": [
+    "browser extension",
+    "safari extension",
+    "chrome"
+  ],
+  "author": "Bing Qiao",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/webextension-polyfill": "^0.8.2",
+    "esbuild": "^0.14.11",
+    "typescript": "^4.5.4",
+    "webextension-polyfill": "^0.8.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "bulma": "^0.9.3",
+    "immer": "^9.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1"
+  }
+}
